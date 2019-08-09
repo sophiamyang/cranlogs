@@ -24,7 +24,6 @@ test_requirements = [
 
 setup(
     author="Sophia Man Yang",
-    author_email='sophimyang@gmail.com',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
@@ -41,7 +40,7 @@ setup(
     description="CRAN download counts for R packages",
     install_requires=requirements,
     license="BSD license",
-    # long_description=readme + '\n\n' + history,
+    long_description=readme + '\n\n' + history,
     include_package_data=True,
     keywords='cranlogs',
     name='cranlogs',
