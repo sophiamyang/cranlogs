@@ -6,6 +6,7 @@ Welcome to cranlogs's documentation!
    :caption: Contents:
    
    installation
+   cran_downloads
 
 
 Indices and tables
