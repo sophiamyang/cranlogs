@@ -1,4 +1,4 @@
-cranlogs
+
 pandas
 requests
 ipython
