@@ -30,6 +30,7 @@ Features
 
 Credits
 -------
+This package is the Python version of the R package cranlogs (https://cranlogs.r-pkg.org/).
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
