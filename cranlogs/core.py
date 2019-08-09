@@ -6,15 +6,11 @@ base_url = "http://cranlogs.r-pkg.org/"
 daily_url = base_url + "downloads/daily/"
 top_url = base_url + "top/"
 
-def cran_downloads(packages='', when='', start="last-day", end="last-day"):
+def cran_downloads(packages=None, when=None, start="last-day", end="last-day"):
     """
     daily downloads of cran package data  
 
-    """  
-    # make sure packages is a list
-    if isinstance(packages, list) == False:
-        packages = list(packages.split(","))
-        
+    """         
     if when in (["last-day", "last-week", "last-month"]):
         interval = when
     elif start=="last-day" and end=="last-day":
@@ -31,11 +27,15 @@ def cran_downloads(packages='', when='', start="last-day", end="last-day"):
     url = daily_url 
     
     # total R package downloads
-    if packages==[''] or packages=='': 
-        r = requests.get(url+interval+','.join(packages))
+    if packages==[''] or packages=='' or packages is None: 
+        r = requests.get(url+interval)
         dfs = pd.DataFrame(r.json()[0]['downloads'])
 
     else:
+        # make sure packages is a list
+        if isinstance(packages, list) == False:
+            packages = list(packages.split(","))
+            
         r = requests.get(url+interval+'/'+','.join(packages))
         
         # R installer downloads
