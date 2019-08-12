@@ -13,7 +13,7 @@ Parameters:
 - packages: a string representing one package, or a list of multiple packages.
 - when: "last-day", "last-week", or "last-month". When defined, start and end will be ignored.
 - start: start date with format year-month-day.
-- start: end date with format year-month-day.
+- end: end date with format year-month-day.
 
 Examples
 ---------------
